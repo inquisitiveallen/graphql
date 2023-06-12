@@ -1,13 +1,13 @@
-const { model, Schema } = require('mongoose')
+const { model, Schema } = require('mongoose');
 
 const postSchema = new Schema({
-    username: String,
     body: String,
+    username: String,
     createdAt: String,
     comments: [
         {
-            username: String,
             body: String,
+            username: String,
             createdAt: String
         }
     ],
@@ -21,6 +21,6 @@ const postSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'users'
     }
-})
+});
 
-module.exports = model('Post', postSchema)
+module.exports = model('Post', postSchema);
